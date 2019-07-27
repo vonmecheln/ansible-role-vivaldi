@@ -65,7 +65,6 @@ branches:
 
 before_install:
   - sudo apt-get update -qq
-  - ansible-galaxy install vonmecheln.vivaldi --force
 
 install:
   # Install Ansible.
@@ -73,6 +72,7 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
 script:
+  - ansible-galaxy install vonmecheln.vivaldi --force
   # Check the role/playbook's syntax.
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 
