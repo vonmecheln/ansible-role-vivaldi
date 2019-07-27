@@ -11,4 +11,4 @@
 - name: Install the application package (Debian)
   apt:
     name: "{{ vivaldi_package_name }}"
-  update_cache: yes
+    update_cache: yes
