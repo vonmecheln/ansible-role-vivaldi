@@ -1,0 +1,14 @@
+---
+- name: Import the APT repo key (Debian)
+  apt_key:
+    url: "{{ apt_repo_key }}"
+
+- name: Create the APT repository (Debian)
+  apt_repository:
+    repo: deb https://repo.vivaldi.com/archive/deb/ stable main
+    filename: "{{ vivaldi_package_name }}"
+
+- name: Install the application package (Debian)
+  apt:
+    name: "{{ vivaldi_package_name }}"
+update_cache: yes

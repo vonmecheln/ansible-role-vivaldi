@@ -1,2 +1,6 @@
 ---
 # defaults file for vivaldi
+
+vivaldi_package_name: "vivaldi-stable"
+
+apt_repo_key: https://repo.vivaldi.com/archive/linux_signing_key.pub
