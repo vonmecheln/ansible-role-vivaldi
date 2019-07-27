@@ -1,9 +1,9 @@
 ---
 sudo: required
-dist: trusty
+dist: xenial
 
 language: python
-python: "2.7.9"
+#python: "2.7.9"
 
 env:
   - ANSIBLE_VERSION=latest
@@ -65,6 +65,7 @@ branches:
 
 before_install:
   - sudo apt-get update -qq
+  - ansible-galaxy install vonmecheln.vivaldi --force
 
 install:
   # Install Ansible.
