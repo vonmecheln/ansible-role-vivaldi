@@ -1,11 +1,7 @@
 galaxy_info:
   author: vonmecheln
   description: This role installs the Vivaldi web browser on Linux.
-  min_ansible_container_version: 0.2.0
-
-  # If Ansible is required outside of the build container, provide the minimum version:
-  # min_ansible_version:
-
+  min_ansible_version: 2.5.0.0
   license: license (GPLv2)
   platforms:
   - name: Debian
@@ -16,6 +12,5 @@ galaxy_info:
     - vivaldi
     - web
     - browser
-    - container
 
 dependencies: []
